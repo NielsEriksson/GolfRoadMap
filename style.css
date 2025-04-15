@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #3a3b3b;
     color: #2c3e50;
     line-height: 1.6;
 }
@@ -229,7 +229,7 @@ body {
 
 /* Target Goal Box */
 .target-goal {
-  background-color: #222; /* Dark background */
+  background: linear-gradient(to right, #FF7E5F, #feb47b); /* Sunset Gradient */; /* Dark background */
   color: white; /* Text color */
   padding: 20px;
   margin-bottom: 20px;
@@ -237,6 +237,10 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center;
 }
+.target-goal *{
+    color: #000000;
+}
+
 
 .target-goal-heading {
   font-size: 1.8em; /* Larger font for the Target Goal heading */
@@ -251,12 +255,13 @@ body {
     background-color: #f9f9f9;
     max-width: 600px; /* Control the box width */
 }
-.session-box p {
+.session-box li {
     display: inline-block;
     border-bottom: 2px solid black;
     padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
     margin-bottom: 1rem;
-    width: 60%; /* or any fixed value like 200px */
+    width: 75%; /* or any fixed value like 200px */
   }
 
   /* Make embedded videos responsive */
