@@ -3,83 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phase 2 - Start Competing</title>
+  <title>Phase 2 - Compete in Local Tournaments</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="scripts.js" defer></script>
+  <style>
+    .info-card-content { display: none; }
+    .info-card.open .info-card-content { display: block; }
+    .info-card h2, .info-card h3 {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="overlay">
-      <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="64" height="64">
-      <h1> Phase 2: Start Competing</h1>
-      <p>Goal: Transition into local amateur competitions and get used to the pressures of competition.</p>
-    </div>
-  </header>
-
-  <!-- Burger Menu Icon -->
-  <div class="burger-menu" onclick="toggleSidePanel()">
-    <div></div>
-    <div></div>
-    <div></div>
+<header class="hero">
+  <div class="overlay">
+    <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="64" height="64">
+    <h1>Phase 2: Compete in Local Tournaments</h1>
+    <p>Goal:Transition into local amateur competitions and get used to the pressures of competition.</p>
   </div>
+</header>
 
-  <!-- Side Panel with Phase Buttons -->
-  <div class="side-panel" id="sidePanel">
-    <a href="index.html" class="back-to-main">
-      <img src="https://cdn-icons-png.flaticon.com/128/619/619153.png" width="48" height="48"><br>
-      <span class="phase-number">Back to Main Menu</span>
-    </a>
-    <a href="phase1.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="48" height="48"><br><span class="phase-number">Phase 1</span><br><span class="phase-description">Foundations</span>
-    </a>
-    <a href="phase2.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="48" height="48"><br><span class="phase-number">Phase 2</span><br><span class="phase-description">Compete</span>
-    </a>
-    <a href="phase3.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="48" height="48"><br><span class="phase-number">Phase 3</span><br><span class="phase-description">Amateur Level</span>
-    </a>
-    <a href="phase4.html">
-      <img src="https://cdn-icons-png.flaticon.com/512/321/321832.png" width="48" height="48"><br><span class="phase-number">Phase 4</span><br><span class="phase-description">Turn Pro</span>
-    </a>
-    <a href="phase5.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2617/2617955.png" width="48" height="48"><br><span class="phase-number">Phase 5</span><br><span class="phase-description">Pro Career</span>
-    </a>
-    <a href="phase6.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2122/2122712.png" width="48" height="48"><br><span class="phase-number">Phase 6</span><br><span class="phase-description">Win Masters</span>
-    </a>
-  </div>
+<div class="burger-menu" onclick="toggleSidePanel()">
+  <div></div><div></div><div></div>
+</div>
 
-  <main class="container">
-    <!-- Target Goal Box -->
-    <div class="target-goal">
-      <h2 class="target-goal-heading">Target Goal</h2>
-      <p>Transition into local amateur competitions and get used to the pressures of competition.</p>
+<!-- Side Panel with Phase Buttons -->
+<div class="side-panel" id="sidePanel">
+  <a href="index.html" class="back-to-main">
+    <img src="https://cdn-icons-png.flaticon.com/128/619/619153.png" width="48" height="48"><br>
+    <span class="phase-number">Back to Main Menu</span>
+  </a>
+  <a href="phase1.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="48" height="48"><br><span class="phase-number">Phase 1</span><br><span class="phase-description">Foundations</span>
+  </a>
+  <a href="phase2.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="48" height="48"><br><span class="phase-number">Phase 2</span><br><span class="phase-description">Compete</span>
+  </a>
+  <a href="phase3.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="48" height="48"><br><span class="phase-number">Phase 3</span><br><span class="phase-description">Amateur Level</span>
+  </a>
+  <a href="phase4.html">
+    <img src="https://cdn-icons-png.flaticon.com/512/321/321832.png" width="48" height="48"><br><span class="phase-number">Phase 4</span><br><span class="phase-description">Turn Pro</span>
+  </a>
+  <a href="phase5.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2617/2617955.png" width="48" height="48"><br><span class="phase-number">Phase 5</span><br><span class="phase-description">Pro Career</span>
+  </a>
+  <a href="phase6.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2122/2122712.png" width="48" height="48"><br><span class="phase-number">Phase 6</span><br><span class="phase-description">Win Masters</span>
+  </a>
+</div>
+
+<main class="container">
+
+  
+
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/1599/1599828.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">1. Join Local Tournaments</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Begin participating in local tournaments to gain experience and assess your progress.</p>
+      <p style="font-size: 22px"><strong>Local Competitions Near Malmö:</strong></p>
+      <ul>
+        <li><strong>Hylliekrokens Golfcenter:</strong> Regularly hosts club championships and local events. .</li>
+        <li><strong>Hinton Golf Club (Rönnebäck):</strong> A private course near Malmö known for hosting tournaments on the Nordic League.</li>
+        <li><strong>European Amateur Team Championship 2025:</strong> Scheduled at Ljunghusen Golf Club near Malmö.Use tournament nerves as fuel – practice pre-shot routines and deep breathing.</li>
+      </ul>
+      <p><strong>Tip:</strong> Start with smaller, local tournaments to build confidence before progressing to larger events.​</p>
     </div>
+  </section>
 
-    <section class="info-card">
-      <h2>1. Join Local Amateur Competitions</h2>
-      <p><span class="action-text">Action:</span> Start competing in local tournaments at Hylliekroken or nearby courses.</p>
-      <p>Play in Club Championships and small-scale amateur events to get used to tournament pressure and gauge your improvements.</p>
-      <p>Tip: Compete in tournaments to learn how to manage nerves and build confidence in tournament settings.</p>
-    </section>
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/1787/1787077.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">2. Refine Your Mental Game</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span>Develop mental strategies to handle the pressures of competition.​</p>
+      <ul>
+        <li><strong>Establish a Pre-Shot Routine:</strong> Consistent routines can help manage nerves and improve focus.​</li>
+        <li><strong>Practice Mindfulness:</strong> Techniques like deep breathing can aid in maintaining composure under pressure.​</li>
+        <li><strong>Recommended Reading:</strong></li>
+          <ul>
+            <li><strong><a href="https://www.youtube.com/watch?v=-L97cjemM5k" target="_blank">Golf is Not a Game of Perfect</strong> by Dr. Bob Rotella</a></li>
+          
+              <li><strong><a href="https://www.scribd.com/document/239097022/Mastering-Golf-s-Mental-Game" target="_blank">Mastering Golf's Mental Game</strong> by Dr. Michael T. Lardon</a></li>
+          
+                <li><strong><a href="https://www.scribd.com/document/131232935/The-Mental-Game" target="_blank">The Mental Game of Golf: Strategies for Improving Your Confidence</strong> by Patrick Cohn</a></li>
+        </ul>
+      </ul>
+    </div>
+  </section>
 
-    <section class="info-card">
-      <h2>2. Refine Your Mental Game</h2>
-      <p><span class="action-text">Action:</span> During tournaments, focus on staying calm under pressure.</p>
-      <p>Work on your pre-shot routine to help with consistency and dealing with nerves.</p>
-      <p>Consider reading mental game books like "Golf is Not a Game of Perfect" by Bob Rotella to improve your mindset.</p>
-    </section>
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/14760/14760332.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">3. Continue Reducing Your Handicap</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Focus on consistent play and refine your technique based on tournament experiences.​​</p>
+      <p><span class="action-text">Goal:</span>  Aim to lower your handicap to 12 by the end of your second year.​.​​</p>
+      <ul><strong>Practice Focus:</strong>
+        <li>Analyze tournament rounds to identify areas for improvement.​</li>
+        <li>Incorporate targeted practice sessions to address weaknesses.</li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="info-card">
-      <h2>3. Continue to Reduce Your Handicap</h2>
-      <p><span class="action-text">Action:</span> Focus on consistent play and refine your technique based on tournament experiences.</p>
-      <p>Aim to lower your handicap to 12 by the end of your second year.</p>
-      <p>Target Goal: Lower your handicap to 12 by the end of your second year.</p>
-    </section>
-  </main>
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/10806/10806777.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">4. Suggested Timeline</h2>
+    <div class="info-card-content">
+      <ul>
+        <li>Challenge yourself with unfamiliar layouts.</li>
+        <li>Record yardage books or course notes.</li>
+        <li>Learn to adapt quickly – club selection, slopes, bunker styles.</li>
+      </ul>
+    </div>
+  </section>
+  <div class="target-goal">
+    <img src="https://cdn-icons-png.flaticon.com/128/3050/3050426.png" width="48" height="48">
+    <h2 class="target-goal-heading">Target Goal</h2>  
+    <p> Lower your handicap to 12 and gain competitive experience.</p>
+  </div>
+  
+
+
+
+</main>
 
 </body>
 </html>
