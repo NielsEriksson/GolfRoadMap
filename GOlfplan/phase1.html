@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phase 1 - Establish a Solid Foundation</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="scripts.js" defer></script>
+  <style>
+    .info-card-content { display: none; }
+    .info-card.open .info-card-content { display: block; }
+    .info-card h2, .info-card h3 {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="overlay">
+    <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="64" height="64">
+    <h1> Phase 1: Establish a Solid Foundation</h1>
+    <p>Goal: Lower your handicap from 36 to 18 or better and gain official status as a player.</p>
+  </div>
+</header>
+
+<div class="burger-menu" onclick="toggleSidePanel()">
+  <div></div><div></div><div></div>
+</div>
+
+<!-- Side Panel with Phase Buttons -->
+<div class="side-panel" id="sidePanel">
+  <a href="index.html" class="back-to-main">
+    <img src="https://cdn-icons-png.flaticon.com/128/619/619153.png" width="48" height="48"><br>
+    <span class="phase-number">Back to Main Menu</span>
+  </a>
+  <a href="phase1.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="48" height="48"><br><span class="phase-number">Phase 1</span><br><span class="phase-description">Foundations</span>
+  </a>
+  <a href="phase2.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="48" height="48"><br><span class="phase-number">Phase 2</span><br><span class="phase-description">Compete</span>
+  </a>
+  <a href="phase3.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="48" height="48"><br><span class="phase-number">Phase 3</span><br><span class="phase-description">Amateur Level</span>
+  </a>
+  <a href="phase4.html">
+    <img src="https://cdn-icons-png.flaticon.com/512/321/321832.png" width="48" height="48"><br><span class="phase-number">Phase 4</span><br><span class="phase-description">Turn Pro</span>
+  </a>
+  <a href="phase5.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2617/2617955.png" width="48" height="48"><br><span class="phase-number">Phase 5</span><br><span class="phase-description">Pro Career</span>
+  </a>
+  <a href="phase6.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2122/2122712.png" width="48" height="48"><br><span class="phase-number">Phase 6</span><br><span class="phase-description">Win Masters</span>
+  </a>
+</div>
+
+<main class="container">
+  <div class="target-goal">
+    <h2 class="target-goal-heading">Target Goal</h2>
+    <p>Lower your handicap from 36 to 18 or better and gain official status as a player.</p>
+  </div>
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">1. Get Your Official Handicap & Green Card</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Join a local golf club like <strong>Hylliekroken GC</strong> and register via SGF.</p>
+      <ul>
+        <li>Take a beginner course covering rules, etiquette, and swing basics.</li>
+        <li>Pass both the theory exam and a basic playing ability test.</li>
+        <li>Receive your official Green Card and begin tracking your handicap using golf apps or the club’s system.</li>
+        <li>Initial handicap will likely start at 54 and adjust as you log more rounds.</li>
+        <li>Start playing shorter courses (par-3 or 9-hole) to build confidence.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">2. Bi-Weekly Training Plan</h2>
+    <div class="info-card-content">
+
+      <section class="info-card">
+        <h3 onclick="toggleCard(this)">✅ Plan A – Swing Foundation & Core Skills</h3>
+        <div class="info-card-content">
+
+          <div class="session-box">
+            <p><strong>🗓 Session 1 – Range Day: Swing & Contact</strong></p>
+            <ul>
+              <li><strong>Drills:</strong>
+                <ul>
+                  <li>Feet Together Drill – <a href="https://www.youtube.com/watch?v=0lhtR2Qqhlg" target="_blank">[Watch Drill]</a></li>
+                  <div class="video-embed">
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0lhtR2Qqhlg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <li>Alignment Stick Drill – <a href="https://www.youtube.com/watch?v=sL4EdzjdVwo" target="_blank">[Watch Video]</a></li>
+                </ul>
+              </li>
+              <li><strong>On-Course Practice:</strong> Play 4 holes using only 3 clubs (e.g., 7i, wedge, putter).</li>
+            </ul>
+          </div>
+
+          <div class="session-box">
+            <p><strong>🗓 Session 2 – Short Game Day</strong></p>
+            <ul>
+              <li><strong>Putting:</strong> Clock drill, Ladder drill – <a href="https://www.youtube.com/watch?v=1TXuVetqYV4" target="_blank">[Ladder Drill]</a></li>
+              <li><strong>Chipping:</strong> Land-on-towel drill – <a href="https://www.youtube.com/watch?v=AF884ciovT4" target="_blank">[Watch]</a></li>
+              <li><strong>Bunker:</strong> Splash drill – <a href="https://www.youtube.com/watch?v=lUcy91z2LPQ" target="_blank">[Watch Bunker Basics]</a></li>
+            </ul>
+          </div>
+
+          <div class="session-box">
+            <p><strong>🗓 Session 3 – On-Course or Simulated Play</strong></p>
+            <ul>
+              <li>Play 9 holes using 3-4 clubs.</li>
+              <li>Focus on club selection, pre-shot routine, and strategy.</li>
+            </ul>
+          </div>
+
+          <p><strong>Tip:</strong> Track progress with apps like <em>Hole19</em> or <em>Golfshot</em>.</p>
+        </div>
+      </section>
+      <section class="info-card">
+        <h3 onclick="toggleCard(this)">🎯 Plan B – Accuracy, Strategy & Pressure Play</h3>
+        <div class="info-card-content">
+
+          <div class="session-box">
+            <p><strong>🗓 Session 1 – Range Day: Accuracy & Targets</strong></p>
+            <ul>
+              <li><strong>Target Drills:</strong>
+                <ul>
+                  <li>9-Shot Challenge – <a href="https://www.youtube.com/watch?v=VxQl3RDE0TM" target="_blank">[Watch Challenge]</a></li>
+                  <li>1-Club Challenge – <a href="https://www.youtube.com/watch?v=J-BbxOR5GUI" target="_blank">[Fun Drill]</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="session-box">
+            <p><strong>🗓 Session 2 – Short Game Pressure</strong></p>
+            <ul>
+              <li><strong>Games:</strong>
+                <ul>
+                  <li>Par 18 Drill – <a href="Par 18 Short Game Challenge | by Ross McArthu" target="_blank">[Watch Game]</a></li>
+                  <li>Up & Down Test – <a href="https://www.youtube.com/watch?v=WoBKQDITFYY" target="_blank">[Watch Drill]</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="session-box">
+            <p><strong>🗓 Session 3 – Tactical Play</strong></p>
+            <ul>
+              <li>Track stats like Fairways Hit, GIR (Greens in Regulation), and Up & Down %.</li>
+              <li>Simulate full hole scoring on practice greens with realistic scenarios.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">3. Find a Coach & Work on Fundamentals</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Hire a PGA-certified coach for regular lessons every 2–3 weeks.</p>
+      <ul>
+        <li>Work on grip, stance, alignment, and posture (GASP).</li>
+        <li>Get video feedback or swing analysis using tools like TrackMan or Coach’s Eye.</li>
+        <li>Set simple, measurable goals (e.g., hit 7/10 solid shots with 8-iron).</li>
+        <li>Ask your coach for drills to work on between sessions.</li>
+        <li>Fundamentals video: <a href="https://www.youtube.com/watch?v=tRpJelpWhwg" target="_blank">[Grip, Posture, Alignment – MeAndMyGolf]</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">4. Short Game is King</h2>
+    <div class="info-card-content">
+      <p>Mastering putting, chipping, pitching, and bunker shots is the fastest way to lower your scores.</p>
+      <ul>
+        <li>Practice 3 times more short game than full swing.</li>
+        <li>Use drills like:
+          <ul>
+            <li>Ladder Drill (Putting)</li>
+            <li>Par 18 Challenge</li>
+            <li>Landing towel zones for chipping</li>
+          </ul>
+        </li>
+        <li>Track your Up & Down % from 30 yards in.</li>
+        <li>Use a scorecard or short game app to monitor consistency.</li>
+      </ul>
+      <p><strong>Drills Playlist:</strong> <a href="https://www.youtube.com/watch?v=DdNE3T3PpBo" target="_blank">[Complete Short Game Guide]</a></p>
+    </div>
+  </section>
+
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">5. Improve Course Management</h2>
+    <div class="info-card-content">
+      <ul>
+        <li>Play to your strengths. Don’t hit driver if it brings hazards into play.</li>
+        <li>Use GPS apps to plan your shots before the hole starts.</li>
+        <li>Learn to take your medicine and avoid blow-up holes.</li>
+        <li>Play conservative lines and aggressive swings.</li>
+        <li>Know your carry distances for each club.</li>
+      </ul>
+      <p><strong>Tip:</strong> Watch smart strategy guides – <a href="https://www.youtube.com/watch?v=hp7NUisfGis" target="_blank">[On-Course Management – Break 90]</a></p>
+    </div>
+  </section>
+
+  <section class="info-card">
+    <h2 onclick="toggleCard(this)">6. Helpful Extras</h2>
+    <div class="info-card-content">
+      <ul>
+        <li>▶️ <a href="https://www.youtube.com/playlist?list=PLKnkfgDBi62klf-xdFc1lDSVAtliM99Jn" target="_blank">Rick Shiels Simple Golf Tips</a></li>
+        <li>📱 <a href="https://www.golfshot.com/" target="_blank">GolfShot – GPS & Stats Tracker</a></li>
+        <li>📚 <a href="https://www.randa.org/en/rog/the-rules-of-golf" target="_blank">Simplified Rules of Golf – R&A</a></li>
+        <li>🛠️ Use a rangefinder or GPS app to know exact distances.</li>
+        <li>🧠 Develop a pre-shot routine to stay calm and focused.</li>
+        <li>🎧 Listen to podcasts or books about golf strategy and mindset.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
