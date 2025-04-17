@@ -255,6 +255,7 @@ body {
     background-color: #f9f9f9;
     max-width: 600px; /* Control the box width */
 }
+
 .session-box li {
     display: inline-block;
     border-bottom: 2px solid black;
@@ -263,7 +264,22 @@ body {
     margin-bottom: 1rem;
     width: 75%; /* or any fixed value like 200px */
   }
-
+.timeline-box{
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px; /* Control the box width */
+}
+.timeline-text{
+    display: inline-block;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    margin-bottom: 1rem;
+    width: 75%; /* or any fixed value like 200px */
+}
   /* Make embedded videos responsive */
 .video-embed {
     position: relative;

@@ -8,78 +8,209 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="scripts.js" defer></script>
+  <style>
+    .info-card-content { display: none; }
+    .info-card.open .info-card-content { display: block; }
+    .info-card h2, .info-card h3 {
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="overlay">
-      <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="64" height="64">
-      <h1> Phase 3: Becoming a Competitive Amateur</h1>
-      <p>Goal: Start targeting bigger, higher-level amateur events and work on refining your skills.</p>
-    </div>
-  </header>
+<header class="hero">
+  <div class="overlay">
+    <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="64" height="64">
+    <h1>Phase 3: Becoming a Competitive Amateur</h1>
+    <p>Goal: Start targeting bigger, higher-level amateur events and refine your skills.</p>
+  </div>
+</header>
 
-  <!-- Burger Menu Icon -->
-  <div class="burger-menu" onclick="toggleSidePanel()">
-    <div></div>
-    <div></div>
-    <div></div>
+<div class="burger-menu" onclick="toggleSidePanel()">
+  <div></div><div></div><div></div>
+</div>
+
+<div class="side-panel" id="sidePanel">
+  <a href="index.html" class="back-to-main">
+    <img src="https://cdn-icons-png.flaticon.com/128/619/619153.png" width="48" height="48"><br>
+    <span class="phase-number">Back to Main Menu</span>
+  </a>
+  <a href="phase1.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="48" height="48"><br><span class="phase-number">Phase 1</span><br><span class="phase-description">Foundations</span>
+  </a>
+  <a href="phase2.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="48" height="48"><br><span class="phase-number">Phase 2</span><br><span class="phase-description">Compete</span>
+  </a>
+  <a href="phase3.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="48" height="48"><br><span class="phase-number">Phase 3</span><br><span class="phase-description">Amateur Level</span>
+  </a>
+  <a href="phase4.html">
+    <img src="https://cdn-icons-png.flaticon.com/512/321/321832.png" width="48" height="48"><br><span class="phase-number">Phase 4</span><br><span class="phase-description">Turn Pro</span>
+  </a>
+  <a href="phase5.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2617/2617955.png" width="48" height="48"><br><span class="phase-number">Phase 5</span><br><span class="phase-description">Pro Career</span>
+  </a>
+  <a href="phase6.html">
+    <img src="https://cdn-icons-png.flaticon.com/128/2122/2122712.png" width="48" height="48"><br><span class="phase-number">Phase 6</span><br><span class="phase-description">Win Masters</span>
+  </a>
+</div>
+
+<main class="container">
+
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/9520/9520469.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">1. Compete in National & International Events</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Start competing in bigger amateur tournaments like the Swedish Amateur Championship and European Amateur Championship.</p>
+      <ul>
+        <li>Qualify by consistently playing to a handicap of 12 or better, then aim for 6 or better.</li>
+      <li>Build tournament experience across different course styles and conditions (travel early when possible).</li>
+      <li>Plan tournament travel in advance: include practice rounds, course mapping, and nutrition strategies.</li>
+      <li>Track performances and finishes to build a competitive  <a href="resume.html" target="_blank"> resume </a> for future invitations or sponsorships.</li>
+      </ul>
+    </div>
+  </section>
+  
+  
+
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/2117/2117223.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">2. Improve Physical Conditioning</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Focus on golf-specific fitness (strength, mobility, flexibility) with a structured, home-friendly workout plan.</p>
+      <ul>
+        <li>Strengthen your core, legs, and stability without needing a gym.</li>
+        <li>Build flexibility and mobility to prevent injuries and improve swing efficiency.</li>
+        <li>Stay consistent with a simple 2–3 day weekly plan.</li>
+      </ul>
+  
+      <h3>🏠 Sample Weekly Golf Fitness Plan (No Gym Required)</h3>
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Day 1: Strength Focus (Core & Legs)</strong>
+          <li>Bodyweight Squats – 3 sets of 15 reps 
+            <br><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzByYWFueTVqY3Nmdm4xbGwyaWV4d2Q5dWJhcjdxNGdmMTlzZ3o0bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MdRI2tmI5e7HX7P76U/giphy.gif" alt="Bodyweight Squats GIF" width="200">
+          </li>
+          <li>Hip Thrusts – 3 sets of 20 reps 
+            <br><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGg5MW16NzQ1dWF2OGZ5a2h6NG0zdmEzNTc2ZTVmM3JoNGFhZm96NCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/THOxWu8j7zhgwveMWp/giphy.webp" alt="Hip Thrusts GIF" width="200">
+          </li>
+          <li>Plank (front + side planks) – 3 rounds, 30 sec each 
+            <br><img src="https://media.giphy.com/media/PD3yDCeh4E7E4/giphy.gif" alt="Plank GIF" width="200">
+          </li>
+          <li>Walking Lunges – 3 sets of 12 reps per leg 
+            <br><img src="https://media.giphy.com/media/3tn51rdklj6yA/giphy.gif" alt="Walking Lunges GIF" width="200">
+          </li>
+        </ul>
+      </div>
+  
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Day 2: Mobility & Flexibility</strong>
+          <li>Cat-Cow Stretch – 2 min 
+            <br><img src="https://media.giphy.com/media/H3u10VvNIdY02/giphy.gif" alt="Cat-Cow Stretch GIF" width="200">
+          </li>
+          <li>Hip Flexor Stretch – 2 min per side 
+            <br><img src="https://media.giphy.com/media/JJxMbmRt3Ym5e/giphy.gif" alt="Hip Flexor Stretch GIF" width="200">
+          </li>
+          <li>Thoracic Spine Rotations – 2 sets of 15 reps 
+            <br><img src="https://media.giphy.com/media/N7zy3UqDguxfu/giphy.gif" alt="Thoracic Spine Rotations GIF" width="200">
+          </li>
+          <li>Hamstring Stretch – 2 min per side 
+            <br><img src="https://media.giphy.com/media/yrWfH8AVkvzxO/giphy.gif" alt="Hamstring Stretch GIF" width="200">
+          </li>
+          <li>Shoulder Opener Stretch – 2 min 
+            <br><img src="https://media.giphy.com/media/fHG93DRzn5Lgg/giphy.gif" alt="Shoulder Opener Stretch GIF" width="200">
+          </li>
+        </ul>
+      </div>
+  
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Day 3: Power + Stability (Optional 3rd Day)</strong>
+          <li>Jump Squats – 3 sets of 10 reps 
+            <br><img src="https://media.giphy.com/media/KNfShleLfEDx5/giphy.gif" alt="Jump Squats GIF" width="200">
+          </li>
+          <li>Medicine Ball Rotational Throws (or mimic motion if no ball) – 3 sets of 15 reps per side 
+            <br><img src="https://media.giphy.com/media/0z03ctZkdkptV/giphy.gif" alt="Medicine Ball Rotational Throws GIF" width="200">
+          </li>
+          <li>Single-Leg Balance (Eyes Closed) – 3 x 30 sec each leg 
+            <br><img src="https://media.giphy.com/media/mPRvvz80aFE2o/giphy.gif" alt="Single-Leg Balance GIF" width="200">
+          </li>
+          <li>Pushups – 3 sets of 12 reps (modify as needed) 
+            <br><img src="https://media.giphy.com/media/8AzDFyXtxmn3b/giphy.gif" alt="Pushups GIF" width="200">
+          </li>
+        </ul>
+      </div>
+  
+      <p><em>Tip: If you only have time for 2 days, rotate between strength and mobility weeks!</em></p>
+    </div>
+  </section>
+  
+  
+  
+
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/11670/11670154.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">3. Focus on Consistency and Course Management</h2>
+    <div class="info-card-content">
+      <p><span class="action-text">Action:</span> Prioritize short game and mental toughness training.</p>
+      <ul>
+        <li>Refine course management: play smart, safe golf.</li>
+        <li>Continue sharpening putting and wedges under pressure.</li>
+        <li>Target Goal: Reach a handicap of 4 or better by end of year 3.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/10806/10806777.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">4. Suggested Timeline</h2>
+    <div class="info-card-content">
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Month 1–4: Build Tournament Experience</strong>
+          <li>Play in national-level events if possible.</li>
+          <li>Continue local tournaments for match sharpness.</li>
+          <li>Work on physical conditioning 2–3x per week.</li>
+        </ul>
+      </div>
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Month 5–8: Target Higher Finishes</strong>
+          <li>Focus on placing well, not just participating.</li>
+          <li>Analyze tournament rounds and adjust training accordingly.</li>
+          <li>Strengthen mental game: stick to your routines, regardless of outcome.</li>
+        </ul>
+      </div>
+      <div class="timeline-box">
+        <ul><strong class="timeline-text">Month 9–12: Prepare for Bigger Leaps</strong>
+          <li>Play international amateur events if ready.</li>
+          <li>Work on endurance for multi-day events.</li>
+          <li>Set a goal to reach handicap 4 or better by end of phase.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="info-card">
+    <img src="https://cdn-icons-png.flaticon.com/128/5578/5578987.png" width="48" height="48">
+    <h2 onclick="toggleCard(this)">5. Helpful Extras</h2>
+    <div class="info-card-content">
+      <ul>
+        <li>▶️ <a href="https://www.youtube.com/playlist?list=PLKnkfgDBi62nV3HcqGHUz72W61MZykRtx" target="_blank">Me and My Golf – Advanced Skills Series</a></li>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5Y59tc8TvYLNc1wvN_EwUVh-OKyOD5cH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <li>📱 <a href="https://www.arccosgolf.com/" target="_blank">Arccos Caddie – Smart Sensors & Game Analytics</a></li>
+        <li>📚 <a href="https://www.sportpsych.org/pdfdocs/golf_handbook.pdf" target="_blank">Golf Psychology Handbook – Free PDF Guide</a></li>
+        <li>🛠️ Work with a coach on tournament preparation strategies (e.g., pre-round routines).</li>
+        <li>🧠 Simulate tournament pressure during practice rounds (e.g., create "mini competitions" with friends).</li>
+        <li>🎧 Audiobooks like "Every Shot Must Have a Purpose" to sharpen mental game on the go.</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <div class="target-goal">
+    <img src="https://cdn-icons-png.flaticon.com/128/3050/3050426.png" width="48" height="48">
+    <h2 class="target-goal-heading">Target Goal</h2>
+    <p>Start competing in bigger amateur events and lower your handicap to 4 or better.</p>
   </div>
 
-  <!-- Side Panel with Phase Buttons -->
-  <div class="side-panel" id="sidePanel">
-    <a href="index.html" class="back-to-main">
-      <img src="https://cdn-icons-png.flaticon.com/128/619/619153.png" width="48" height="48"><br>
-      <span class="phase-number">Back to Main Menu</span>
-    </a>
-    <a href="phase1.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/491/491972.png" width="48" height="48"><br><span class="phase-number">Phase 1</span><br><span class="phase-description">Foundations</span>
-    </a>
-    <a href="phase2.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/179/179249.png" width="48" height="48"><br><span class="phase-number">Phase 2</span><br><span class="phase-description">Compete</span>
-    </a>
-    <a href="phase3.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2112/2112143.png" width="48" height="48"><br><span class="phase-number">Phase 3</span><br><span class="phase-description">Amateur Level</span>
-    </a>
-    <a href="phase4.html">
-      <img src="https://cdn-icons-png.flaticon.com/512/321/321832.png" width="48" height="48"><br><span class="phase-number">Phase 4</span><br><span class="phase-description">Turn Pro</span>
-    </a>
-    <a href="phase5.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2617/2617955.png" width="48" height="48"><br><span class="phase-number">Phase 5</span><br><span class="phase-description">Pro Career</span>
-    </a>
-    <a href="phase6.html">
-      <img src="https://cdn-icons-png.flaticon.com/128/2122/2122712.png" width="48" height="48"><br><span class="phase-number">Phase 6</span><br><span class="phase-description">Win Masters</span>
-    </a>
-  </div>
-
-  <main class="container">
-    <!-- Target Goal Box -->
-    <div class="target-goal">
-      <h2 class="target-goal-heading">Target Goal</h2>
-      <p>Start targeting bigger, higher-level amateur events and work on refining your skills.</p>
-    </div>
-
-    <section class="info-card">
-      <h2>1. Compete in National & International Amateur Events</h2>
-      <p><span class="action-text">Action:</span> Start targeting prestigious amateur tournaments like the Swedish Amateur Championship and European Amateur Championship.</p>
-      <p>Once you’re consistently in the low teens or better with your handicap (around 12 or better), you’ll qualify for events with top amateur players.</p>
-      <p>Travel and experience playing on different courses and conditions to gain exposure.</p>
-    </section>
-
-    <section class="info-card">
-      <h2>2. Work on Your Physical Conditioning</h2>
-      <p><span class="action-text">Action:</span> Start focusing on golf-specific fitness (strength, mobility, flexibility).</p>
-      <p>Work on core strength and balance to improve consistency and stamina.</p>
-      <p>Consider hiring a personal trainer who specializes in golf fitness to improve your game and prevent injuries.</p>
-    </section>
-
-    <section class="info-card">
-      <h2>3. Focus on Consistency</h2>
-      <p><span class="action-text">Action:</span> Continue practicing short game and putting.</p>
-      <p>Prioritize course management and mental toughness as you continue to play in higher-level tournaments.</p>
-      <p>Target Goal: Aim to get your handicap to 4 or better by the end of year 3.</p>
-    </section>
-  </main>
+</main>
 
 </body>
 </html>
