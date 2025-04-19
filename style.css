@@ -1,4 +1,7 @@
-/* General reset */
+/* ===================================== */
+/* ========== GENERAL RESET ============ */
+/* ===================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +15,10 @@ body {
     line-height: 1.6;
 }
 
-/* Hero Header */
+/* ===================================== */
+/* ========== HERO HEADER ============== */
+/* ===================================== */
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
                 url('Images/herobackground.jpg') center 75% / cover no-repeat;
@@ -31,11 +37,9 @@ body {
     transition: background-position 0.5s ease-in-out;
 }
 
-/* Overlay */
 .hero .overlay {
     background: rgba(0, 0, 0, 0.6);
     padding: 40px;
-    color: white;
     width: 100%;
 }
 
@@ -49,18 +53,24 @@ body {
     margin-top: 10px;
 }
 
-/* Container */
+/* ===================================== */
+/* ========== GENERAL CONTAINER ======== */
+/* ===================================== */
+
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* Grid Menu */
+/* ===================================== */
+/* ========== GRID MENU STYLES ========= */
+/* ===================================== */
+
 .grid-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ✅ Now it's 3 columns */
-    grid-template-rows: repeat(2, auto);   /* Optional: ensures 2 rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     padding: 40px;
     max-width: 900px;
@@ -72,17 +82,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #FF7E5F, #feb47b); /* Sunset Gradient */
+    background: linear-gradient(to right, #FF7E5F, #feb47b);
     border-radius: 15px;
     color: white;
     font-weight: normal;
     padding: 20px;
-    height: 200px;  /* Ensure buttons have fixed height */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    height: 200px;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;  /* Prevents overflow issues */
+    overflow: hidden;
 }
 
 .grid-menu a:hover {
@@ -97,72 +107,78 @@ body {
     opacity: 0.8;
 }
 
-/* Add a bold, larger font for the "Phase" part */
 .grid-menu a .phase-number {
-    font-size: 26px; /* Larger font for "Phase X" */
+    font-size: 26px;
     font-weight: bolder;
     line-height: 1.4;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black outline */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .grid-menu a .phase-description {
-    font-size: 19px; /* Slightly larger font for the second part of the text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black outline */
+    font-size: 19px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-.action-text
-{
-    font-weight: bold;
-}
-/* Burger Menu */
+
+/* ===================================== */
+/* ========== BURGER MENU ============== */
+/* ===================================== */
+
 .burger-menu {
-    display: block; /* Ensure it is shown */
+    display: block;
     cursor: pointer;
-    position: fixed; /* Fix it at the top of the page, so it stays visible */
-    top: 20px; /* Adjust positioning from the top */
-    left: 20px; /* Keep it aligned to the left */
+    position: fixed;
+    top: 20px;
+    left: 20px;
     z-index: 1000;
-    margin-top: 20px; /* Adds some space below the hero header */
+    margin-top: 20px;
 }
 
 .burger-menu div {
     width: 35px;
     height: 5px;
     margin: 6px 0;
-    background-color: white; /* White lines */
-    border: 1px solid black; /* Black outline around each line */
+    background-color: white;
+    border: 1px solid black;
     transition: 0.4s;
 }
 
+/* ===================================== */
+/* ========== SIDE PANEL =============== */
+/* ===================================== */
+
 .side-panel {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     top: 0;
-    left: 0; /* Position side panel from the left side */
-    width: 250px; /* Set fixed width */
-    height: 100%; /* Full height */
+    left: 0;
+    width: 250px;
+    height: 100%;
     background-color: #000000;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    overflow-y: auto; /* Make the side panel scrollable if content overflows */
+    overflow-y: auto;
 }
 
-/* To prevent overlap, add margin-top to the first button in the panel */
+.side-panel.active {
+    display: block;
+}
+
 .side-panel a:first-child {
-    margin-top: 70px; /* Adjust this value to ensure no overlap with burger icon */
+    margin-top: 70px;
 }
 
 .side-panel a {
     display: block;
     text-decoration: none;
-    color: white; /* Ensure text color is white */
-    padding: 15px; /* Adjust padding for button */
+    color: white;
+    padding: 15px;
     margin-bottom: 10px;
     font-size: 18px;
-    border-radius: 15px; /* Rounded corners */
-    background: linear-gradient(to right, #FF7E5F, #feb47b); /* Sunset Gradient */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Box shadow for visual effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 15px;
+    background: linear-gradient(to right, #FF7E5F, #feb47b);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .side-panel a:hover {
@@ -170,11 +186,10 @@ body {
     box-shadow: 0 12px 24px rgba(188, 26, 26, 0.4);
 }
 
-.side-panel.active {
-    display: block; /* Show the side panel when active */
-}
+/* ===================================== */
+/* ========== INFO CARD STYLES ========= */
+/* ===================================== */
 
-/* Info Cards */
 .info-card {
     background-color: white;
     padding: 30px;
@@ -183,37 +198,34 @@ body {
     box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     text-align: center;
     border: 1px solid #ddd;
-    padding: 1rem;
     transition: all 0.3s ease;
 }
 
-/* Ensure the info card content is visible by default */
 .info-card-content {
-    display: block; /* Make the content visible initially */
-    transition: display 0.3s ease; /* Smooth transition */
+    display: block;
+    transition: display 0.3s ease;
 }
-  
-  
-  .info-card h2::after,
-  .info-card h3::after {
-    content: " ▼";
-    float: right;
-    font-size: 0.8em;
-    color: #666;
-    transition: transform 0.3s ease;
-  }
-  
-  .info-card.collapsed h2::after,
-  .info-card.collapsed h3::after {
-    transform: rotate(-90deg);
-    content: " ▶";
-  }
-  
 
 .info-card h2 {
     font-size: 24px;
     margin-bottom: 16px;
     color: #34495e;
+}
+
+/* Add arrow icons next to expandable headings */
+.info-card h2::after,
+.info-card h3::after {
+    content: " ▼";
+    float: right;
+    font-size: 0.8em;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.info-card.collapsed h2::after,
+.info-card.collapsed h3::after {
+    transform: rotate(-90deg);
+    content: " ▶";
 }
 
 .info-card ul {
@@ -227,67 +239,63 @@ body {
     line-height: 1.6;
 }
 
-/* Target Goal Box */
+/* ===================================== */
+/* ========== TARGET GOAL BOX ========== */
+/* ===================================== */
+
 .target-goal {
-  background: linear-gradient(to right, #FF7E5F, #feb47b); /* Sunset Gradient */; /* Dark background */
-  color: white; /* Text color */
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center;
+    background: linear-gradient(to right, #FF7E5F, #feb47b);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-.target-goal *{
+
+.target-goal * {
     color: #000000;
 }
 
-
 .target-goal-heading {
-  font-size: 1.8em; /* Larger font for the Target Goal heading */
-  font-weight: 800; /* Make it bold */
-  margin-bottom: 10px;
-}
-.session-box {
-    border: 2px solid black;
-    padding: 1rem;
-    margin: 1.5rem auto;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    max-width: 600px; /* Control the box width */
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.session-box li {
-    display: inline-block;
-    border-bottom: 2px solid black;
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
-    margin-bottom: 1rem;
-    width: 75%; /* or any fixed value like 200px */
-  }
-.timeline-box{
+/* ===================================== */
+/* ========== SESSION / TIMELINE BOX === */
+/* ===================================== */
+
+.session-box,
+.timeline-box {
     border: 2px solid black;
     padding: 1rem;
     margin: 1.5rem auto;
     border-radius: 8px;
     background-color: #f9f9f9;
-    max-width: 600px; /* Control the box width */
+    max-width: 600px;
 }
-.timeline-text{
+
+.session-box li,
+.timeline-text {
     display: inline-block;
     border-bottom: 2px solid black;
-    padding-bottom: 0.3rem;
     padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
     margin-bottom: 1rem;
-    width: 75%; /* or any fixed value like 200px */
+    width: 75%;
 }
-  /* Make embedded videos responsive */
+
+/* ===================================== */
+/* ========== EMBEDDED VIDEO STYLES ==== */
+/* ===================================== */
+
 .video-embed {
     position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio for 16:9 video */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    height: auto;
 }
 
 .video-embed iframe {
@@ -297,7 +305,31 @@ body {
     width: 100%;
     height: 100%;
 }
-/* Responsive */
+
+/* ===================================== */
+/* ========== CLICKABLE TEXT =========== */
+/* ===================================== */
+
+.clickable {
+    cursor: pointer;
+    color: #494949;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.clickable:hover {
+    color: #0056b3;
+}
+
+/* Bold for action labels */
+.action-text {
+    font-weight: bold;
+}
+
+/* ===================================== */
+/* ========== RESPONSIVE DESIGN ======== */
+/* ===================================== */
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 32px;

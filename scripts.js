@@ -23,3 +23,11 @@ document.addEventListener("click", function(event) {
     // Toggle the display of the content
     content.style.display = isVisible ? "none" : "block";
    }
+
+   
+  function toggleGif(listItem) {
+    const img = listItem.querySelector('img');
+    if (img) {
+      img.style.display = (img.style.display === 'none' || img.style.display === '') ? 'block' : 'none';
+    }
+  }
